@@ -9,9 +9,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/article', articleRoutes)
+app.use('/article', articleRoutes)
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.json({
         message: 'API连接正常'
     })
